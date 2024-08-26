@@ -1,0 +1,5 @@
+// 1.20.1	2024-07-09T23:21:34.3515017	Registrate Provider for cgc [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+648d8c0d31812a8fd0dede70ec36e0af14b85273 assets/cgc/lang/en_ud.json
+1eb5ef286d257ce31f3b0723a0fee40dcb3d08b1 assets/cgc/lang/en_us.json
+a56ed9cd60fd0b71286ca3d30fed35e0e9b94964 data/cgc/loot_tables/blocks/flotation_casing.json
+dceb6ec4fffd1412a1ae5dd408caa13a5418eee1 data/minecraft/tags/blocks/mineable/pickaxe.json

@@ -63,6 +63,8 @@ loom {
             client {
                 vmArgs '-XX:+AllowEnhancedClassRedefinition'
                 vmArgs '-XX:HotswapAgent=fatjar'
+                property 'mixin.env.remapRefMap', 'true'
+                property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             }
         }
     }
@@ -157,8 +159,12 @@ dependencies {
     modCompileOnly forge.rei.api
     modImplementation forge.rei.forge
 
-    // TOP
-    modCompileOnly(forge.theoneprobe) { transitive = false }
+    // Create
+    modImplementation("com.simibubi.create:create-${libs.versions.minecraft.get()}:${forge.versions.createForge.get()}:all") { transitive = false }
+    modImplementation forge.flywheel
+
+    // Jade
+    modImplementation(forge.jade)
 
     // KJS
     modImplementation forge.kubejs.forge
@@ -175,9 +181,6 @@ dependencies {
     // lombok
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
-
-    // testing mods
-    modCompileOnly forge.radium
 }
 
 processResources {
